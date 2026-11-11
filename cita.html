@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Nuestra cita | Nuestro mapa de citas</title>
-
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,45 +13,86 @@
     <main class="container">
 
         <section class="hero">
-
             <div class="heart">❤️</div>
 
             <h1>Nuestra cita</h1>
 
             <p class="subtitle">
-                Hoy el mapa decidió por nosotros.
+                El mapa ha decidido por nosotros.
             </p>
-
         </section>
 
 
-        <section class="category">
+        <section class="category" id="revelacion">
 
-            <div class="category-icon">✨</div>
+            <div class="category-icon" id="numero-cita">✨</div>
 
-            <h2 id="titulo-cita"></h2>
+            <p id="mensaje-revelacion">
+                Descubriendo nuestra cita...
+            </p>
 
-            <p id="descripcion-cita"></p>
+            <div id="cuenta-regresiva">
+                3
+            </div>
+
+            <div id="resultado-cita" style="display: none;">
+
+                <h2 id="titulo-cita"></h2>
+
+                <p id="descripcion-cita"></p>
+
+            </div>
 
         </section>
 
 
         <footer class="footer">
 
+            <a href="entre-semana.html" class="category">
+                ← Volver al mapa
+            </a>
+
             <p>
                 Sin saber qué viene. Juntos para descubrirlo. ❤️
             </p>
 
         </footer>
-        <script>
-    const parametros = new URLSearchParams(window.location.search);
-    const numero = parametros.get("numero");
-
-    mostrarCita(numero);
-</script>
 
     </main>
 
-</body>
 
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const numero = parametros.get("numero");
+
+        document.getElementById("numero-cita").textContent = "#" + numero;
+
+        let contador = 3;
+
+        const cuenta = document.getElementById("cuenta-regresiva");
+        const mensaje = document.getElementById("mensaje-revelacion");
+        const resultado = document.getElementById("resultado-cita");
+
+        const intervalo = setInterval(() => {
+
+            contador--;
+
+            if (contador > 0) {
+                cuenta.textContent = contador;
+            } else {
+
+                clearInterval(intervalo);
+
+                cuenta.textContent = "❤️";
+                mensaje.textContent = "Esta es nuestra cita...";
+
+                mostrarCita(numero);
+
+                resultado.style.display = "block";
+            }
+
+        }, 1000);
+    </script>
+
+</body>
 </html>
