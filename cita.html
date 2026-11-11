@@ -47,7 +47,10 @@
 
         </footer>
         <script>
-    mostrarCita(1);
+    const parametros = new URLSearchParams(window.location.search);
+    const numero = parametros.get("numero");
+
+    mostrarCita(numero);
 </script>
 
     </main>
