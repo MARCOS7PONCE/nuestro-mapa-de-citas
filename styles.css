@@ -13,60 +13,69 @@ body {
 
 .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 520px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 20px 50px;
 }
+
+/* ------------------------------
+   PORTADA
+------------------------------ */
 
 .hero {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 55px 10px 35px;
 }
 
 .heart {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: 38px;
+    margin-bottom: 18px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 34px;
     line-height: 1.1;
-    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
 }
 
 .subtitle {
-    color: #777;
-    font-size: 16px;
+    color: #817b78;
+    font-size: 15px;
     line-height: 1.6;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
 }
+
+/* ------------------------------
+   TARJETAS
+------------------------------ */
 
 .categories {
     display: grid;
     gap: 15px;
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 .category {
     display: block;
     text-decoration: none;
     color: inherit;
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
     border: 1px solid #eee5e1;
-    border-radius: 22px;
-    padding: 25px 20px;
+    border-radius: 24px;
+    padding: 25px 22px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .category:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 12px 35px rgba(70, 45, 35, 0.08);
 }
 
 .category-icon {
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .category h2 {
@@ -75,13 +84,100 @@ h1 {
 }
 
 .category p {
-    color: #888;
+    color: #88817e;
     font-size: 14px;
+    line-height: 1.5;
 }
+
+/* ------------------------------
+   PANTALLA DE CITA
+------------------------------ */
+
+#revelacion {
+    text-align: center;
+    padding: 45px 25px;
+    margin-top: 15px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #eee5e1;
+    box-shadow: 0 15px 45px rgba(70, 45, 35, 0.06);
+}
+
+#numero-cita {
+    font-size: 18px;
+    color: #a08b82;
+    margin-bottom: 25px;
+}
+
+#mensaje-revelacion {
+    color: #817b78;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#cuenta-regresiva {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 15px 0 25px;
+}
+
+#resultado-cita {
+    padding-top: 10px;
+    animation: aparecer 0.8s ease;
+}
+
+#resultado-cita h2 {
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+#resultado-cita p {
+    color: #77716e;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ------------------------------
+   ANIMACIÓN
+------------------------------ */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------
+   PIE DE PÁGINA
+------------------------------ */
 
 .footer {
     text-align: center;
-    margin-top: 60px;
-    color: #aaa;
+    margin-top: 35px;
+    color: #aaa29e;
     font-size: 13px;
+}
+
+.footer .category {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #5f5753;
+    background: transparent;
+    border: 1px solid #e7ddd8;
+}
+
+.footer .category:hover {
+    background: white;
+    transform: none;
+    box-shadow: none;
 }
