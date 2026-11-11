@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #faf7f5;
+    color: #292525;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.heart {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.categories {
+    display: grid;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.category {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border: 1px solid #eee5e1;
+    border-radius: 22px;
+    padding: 25px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.category-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.category h2 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.category p {
+    color: #888;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #aaa;
+    font-size: 13px;
+}
