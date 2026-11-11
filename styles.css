@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* CONTENEDOR */
 
 .container {
@@ -28,11 +29,81 @@ body {
     padding: 60px 10px 40px;
 }
 
+
+/* PORTADA CON FOTO */
+
+.portada {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    padding: 0;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #292a2e;
+
+    background: #18191c;
+
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+}
+
+
+/* IMAGEN DE FONDO */
+
+.portada-fondo {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("5038fc4a-c619-45fd-89da-614c9c5ed0f9.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.02);
+
+    z-index: 0;
+}
+
+
+/* CONTENIDO SOBRE LA FOTO */
+
+.portada-contenido {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    padding: 45px 25px;
+
+    text-align: center;
+}
+
+
+/* CORAZÓN */
+
 .heart {
     font-size: 34px;
     margin-bottom: 20px;
-    opacity: 0.9;
+    opacity: 0.95;
 }
+
+
+/* TÍTULO */
 
 h1 {
     font-size: 34px;
@@ -42,8 +113,11 @@ h1 {
     font-weight: 600;
 }
 
+
+/* SUBTÍTULO */
+
 .subtitle {
-    color: #a8a5a0;
+    color: #d0ccc6;
     font-size: 15px;
     line-height: 1.7;
     max-width: 410px;
@@ -251,7 +325,7 @@ h1 {
 }
 
 
-/* AJUSTE PARA PANTALLAS GRANDES */
+/* PANTALLAS GRANDES */
 
 @media (min-width: 500px) {
 
